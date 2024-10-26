@@ -12,3 +12,53 @@ body {
   background-color: $pac1-color-background;
   font-family: $pac1-font;
 }
+
+/*****************************/
+/* CAPÇALERA                 */
+/*****************************/
+/* Aspecte */
+header {
+  height: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 0.8rem;
+  padding: 5px;
+}
+
+/* Logo */
+#logo-header {
+  float: left;
+  text-decoration: none;
+}
+
+#logo-header img {
+  height: 81px;
+}
+
+.hero {
+  background-image: url("../images/logo-hero.jpg?as=webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 55vh;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 40%;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 900;
+  color: black;
+}
+
+@media (min-width: 992px) {
+  .hero-text {
+    font-size: 4rem;
+    max-width: 750px;
+  }
+}
