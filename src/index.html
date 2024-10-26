@@ -9,11 +9,135 @@
             type="text/css"
             href="./assets/styles/main.scss"
         />
+        <link
+            rel="stylesheet"
+            href="../node_modules/lite-youtube-embed/src/lite-yt-embed.css"
+        />
+        <script src="../node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
         <!-- do not remove this line! -->
         <title>UOC Boilerplate</title>
     </head>
     <body>
         <include src="include_header.html"></include>
+
+        <div class="body-container_detall">
+            <div class="row_detall">
+                <div class="column_detall_left">
+                    <div class="texte_detall">
+                        <h2>Una mica d'história</h2>
+                        <p>
+                            La vall del Madriu-Perafita-Claror va ser declarada
+                            patrimoni de la humanitat per la UNESCO l’any 2004
+                            atenent al seu valor paisatgístic. La preservació
+                            d’una vall major en la seva totalitat és un fet
+                            insòlit, i l’únic cas que s’ha donat als Pirineus.
+                            Està situada al sud-est d’Andorra i ocupa una
+                            superfície de 4.247 ha. Aquest territori coincideix
+                            amb la conca hidrogràfica del riu Madriu, representa
+                            prop d’un 10 % de la superfície d’Andorra, i es
+                            reparteix entre terrenys de les parròquies d’Encamp,
+                            Andorra la Vella, Sant Julià de Lòria i
+                            Escaldes-Engordany.
+                        </p>
+                        <p>
+                            <picture>
+                                <source
+                                    srcset="
+                                        assets/images/madriu1.jpg?as=webp&width=800
+                                    "
+                                />
+                                <img
+                                    src="assets/images/madriu1.jpg"
+                                    alt="Madriu 1"
+                                    type="image/webp"
+                                />
+                            </picture>
+                        </p>
+
+                        <h2>Video</h2>
+                        <p>
+                            Per tal que tothom pugui gaudir de la experència,
+                            deixem un trailer del concert a la vostra
+                            disposició.
+                        </p>
+                        <lite-youtube
+                            videoid="tVlumuVeZhU"
+                            style="
+                                background-image: url('https://img.youtube.com/vi/tVlumuVeZhU/0.jpg');
+                            "
+                        >
+                            <a
+                                href="https://www.youtube.com/watch?v=tVlumuVeZhU"
+                                class="lty-playbtn"
+                                title="Play Video"
+                            >
+                                <span class="lyt-visually-hidden"
+                                    >Play Video: Keynote (Google I/O '18)</span
+                                >
+                            </a>
+                        </lite-youtube>
+                    </div>
+                </div>
+
+                <div class="column_detall_right">
+                    <h2>Fotos del Concert</h2>
+
+                    <div class="img_detall_lateral">
+                        <picture>
+                            <source
+                                srcset="
+                                    assets/images/ramio.jpg?as=webp&width=320
+                                "
+                                type="image/webp"
+                            />
+                            <img
+                                loading="lazy"
+                                src="assets/images/ramio.jpg?width=320"
+                                alt="Ramio"
+                                type="image/jpeg"
+                            />
+                        </picture>
+                        <div class="img_detall_titol_lateral">Ràmio</div>
+                    </div>
+
+                    <div class="img_detall_lateral">
+                        <picture>
+                            <source
+                                srcset="
+                                    assets/images/fontverd.jpg?as=avif&width=320
+                                "
+                                type="image/avif"
+                            />
+                            <img
+                                loading="lazy"
+                                src="assets/images/fontverd.jpg?width=320"
+                                alt="Fontverd"
+                                type="image/jpeg"
+                            />
+                        </picture>
+                        <div class="img_detall_titol_lateral">Orquestra</div>
+                    </div>
+
+                    <div class="img_detall_lateral">
+                        <picture>
+                            <source
+                                srcset="
+                                    assets/images/illa.jpg?as=heif&width=320
+                                "
+                                type="image/heif"
+                            />
+                            <img
+                                loading="lazy"
+                                src="assets/images/illa.jpg?width=320"
+                                alt="Illa"
+                                type="image/jpeg"
+                            />
+                        </picture>
+                        <div class="img_detall_titol_lateral">Auditori</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>
