@@ -185,24 +185,12 @@ body {
   .column-detall-right {
     width: 100%;
   }
-
-  .img_detall_lateral {
-    width: 33%;
-  }
-
-  .relacionats_column {
-    width: 50%;
-  }
 }
 
 /* Amplada Mòbil*/
 @media screen and (max-width: 600px) {
   .column-detall-left,
   .column-detall-right {
-    width: 100%;
-  }
-
-  .img_detall_lateral {
     width: 100%;
   }
 
