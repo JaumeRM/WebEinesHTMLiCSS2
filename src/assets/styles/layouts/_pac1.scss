@@ -1,3 +1,6 @@
+/*****************************/
+/* GENERAL                    */
+/*****************************/
 * {
   box-sizing: border-box;
 }
@@ -14,9 +17,8 @@ body {
 }
 
 /*****************************/
-/* CAPÇALERA                 */
+/* HEADER                    */
 /*****************************/
-/* Aspecte */
 .header {
   height: 100px;
   width: 100%;
@@ -60,120 +62,94 @@ body {
   }
 }
 
-/* Contenidor de la detall de categoria, disseny responsive i les seves especificitats */
-.body-container_detall {
+/*****************************/
+/* FOOTER                    */
+/*****************************/
+/* Aspecte */
+.footer {
+  background: rgb(0, 59, 74);
+  height: 200px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.footer__box {
+  padding-top: 40px;
+  padding-left: 40px;
+  float: left;
+  text-align: left;
+}
+
+/*****************************/
+/* DETALL                    */
+/*****************************/
+.detall {
   width: 95%;
   padding: 20px;
   margin: 0 auto;
   overflow: auto;
+
+  & img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  & p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 500;
+  }
 }
 
-.body-container_detall img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.row_detall:after {
+.row-detall:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.column_detall_left {
+.column-detall-left {
   float: left;
   width: 65%;
   padding: 20px;
 
-  background-color: rgb(255, 255, 255);
+  & h2 {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    padding-top: 20px;
+    color: green;
+  }
 }
 
-.column_detall_right {
+.column-detall-left__titols {
+  padding: 10px;
+  font-size: 1.1em;
+  line-height: 1em;
+  text-align: center;
+}
+
+.column-detall-left__titols--descarrega {
+  color: blue;
+}
+
+.column-detall-right {
   float: left;
   width: 35%;
   padding: 20px;
   margin-top: -35px;
-  background-color: rgb(255, 255, 255);
+
+  & h2 {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    padding-top: 40px;
+    color: red;
+  }
 }
 
-.column_detall_right h2 {
-  font-size: 1.4em;
-  line-height: 1.2em;
-}
-
-/* Estils de la detall de l'article del categoria */
-.texte_detall {
-  padding-top: 10px;
-}
-
-.texte_detall h2 {
-  font-size: 1.6em;
-  line-height: 1.2em;
-  padding-top: 20px;
-}
-
-.texte_detall p {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  font-weight: 500;
-}
-
-.box_detall {
-  background-color: rgb(229, 225, 254);
-  margin: auto;
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-
-.box_detall_titol {
-  padding-top: 10px;
-  padding-left: 20px;
-
-  font-size: 2.5em;
-  line-height: 1.2em;
-  text-align: left;
-}
-
-.box_detall_subtitol {
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  font-size: 0.9em;
-  line-height: 1.2em;
-  text-align: left;
-  color: rgb(0, 0, 0);
-}
-
-/* Video responsive */
-.video-detall {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
-}
-
-.video-detall-item {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.video-detall::before {
-  display: block;
-  content: "";
-  padding-top: 56.25%;
-}
-
-/* Barra lateral */
-
-/* Images de la barra lateral */
-.img_detall_lateral {
+.column-detall-right__fotos {
   float: left;
   background-color: rgb(255, 255, 255);
   margin: auto;
@@ -184,62 +160,29 @@ body {
   overflow: hidden;
   font-family: $pac1-font-subtitle;
   font-style: italic;
+
+  & img {
+    width: 100%;
+    display: inline-block;
+  }
 }
 
-.img_detall_lateral img {
-  width: 100%;
-  display: inline-block;
-}
-
-/* Titols i subtitols de la barra lateral */
-.img_detall_titol_lateral {
+.column-detall-right__titols {
   padding: 10px;
-
   font-size: 1.1em;
   line-height: 1em;
-  text-align: left;
-}
-
-/* Contenidor dels relacionats, disseny responsive i les seves especificitats */
-.container_relacionats {
-  width: 95%;
-  padding: 20px;
-  margin: 0 auto;
-  overflow: auto;
-}
-
-.container_relacionats p {
-  font-size: 0.8em;
-  line-height: 1.5em;
-  font-weight: 500;
-}
-
-.container_relacionats img {
-  width: 100%;
-  display: inline-block;
-}
-
-.relacionats_column {
-  float: left;
-  width: 25%;
-  padding: 20px;
-}
-
-.relacionats_row:after {
-  content: "";
-  display: table;
-  clear: both;
+  text-align: right;
 }
 
 /* Punts de ruptura pel disseny responsive segons la seva amplada */
 /* Amplada Tablet*/
 @media screen and (max-width: 960px) {
-  .body-container_detall {
+  .detall {
     width: 95%;
   }
 
-  .column_detall_left,
-  .column_detall_right {
+  .column-detall-left,
+  .column-detall-right {
     width: 100%;
   }
 
@@ -254,8 +197,8 @@ body {
 
 /* Amplada Mòbil*/
 @media screen and (max-width: 600px) {
-  .column_detall_left,
-  .column_detall_right {
+  .column-detall-left,
+  .column-detall-right {
     width: 100%;
   }
 
@@ -263,28 +206,15 @@ body {
     width: 100%;
   }
 
-  .relacionats_column {
-    width: 100%;
+  .column-detall-left__titols {
+    padding: 0;
+    font-size: 0.8em;
+    text-align: left;
   }
-}
 
-/*****************************/
-/* FOOTER                    */
-/*****************************/
-/* Aspecte */
-footer {
-  background: rgb(0, 59, 74);
-  height: 200px;
-  width: 100%;
-  left: 0;
-  top: 0;
-  font-size: 0.8rem;
-  color: rgb(255, 255, 255);
-}
-
-.left_footer {
-  padding-top: 40px;
-  padding-left: 40px;
-  float: left;
-  text-align: left;
+  .column-detall-right__titols {
+    padding: 0;
+    font-size: 0.8em;
+    text-align: left;
+  }
 }
