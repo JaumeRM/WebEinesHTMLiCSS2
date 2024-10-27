@@ -54,6 +54,7 @@ header {
   line-height: 1;
   font-weight: 900;
   color: black;
+  font-family: $pac1-font-title;
 }
 
 @media (min-width: 992px) {
@@ -121,31 +122,6 @@ header {
   font-weight: 500;
 }
 
-.texte_detall ul,
-dl {
-  line-height: 1.5em;
-  font-weight: 400;
-  padding-left: 20px;
-  padding-bottom: 5px;
-}
-
-.texte_detall li,
-dd {
-  font-size: 0.9em;
-  padding-bottom: 5px;
-}
-
-.texte_detall blockquote {
-  padding-left: 25px;
-  border-left: 1px solid rgb(255, 0, 0);
-  font-weight: 500;
-}
-
-.texte_detall blockquote p {
-  font-size: 0.9em;
-  line-height: 1.5em;
-}
-
 .box_detall {
   background-color: rgb(229, 225, 254);
   margin: auto;
@@ -210,6 +186,8 @@ dd {
   text-align: center;
   margin-bottom: 20px;
   overflow: hidden;
+  font-family: $pac1-font-subtitle;
+  font-style: italic;
 }
 
 .img_detall_lateral img {
@@ -292,4 +270,25 @@ dd {
   .relacionats_column {
     width: 100%;
   }
+}
+
+/*****************************/
+/* FOOTER                    */
+/*****************************/
+/* Aspecte */
+footer {
+  background: rgb(0, 59, 74);
+  height: 200px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.left_footer {
+  padding-top: 40px;
+  padding-left: 40px;
+  float: left;
+  text-align: left;
 }

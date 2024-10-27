@@ -1,4 +1,5 @@
 @use "sass:color";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -11,5 +12,7 @@ $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
 
-$pac1-font: "Verdana";
+$pac1-font: "Montserrat";
+$pac1-font-title: "Lato";
+$pac1-font-subtitle: "Lato";
 $pac1-color-background: #ffffff;
