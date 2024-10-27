@@ -17,23 +17,18 @@ body {
 /* CAPÇALERA                 */
 /*****************************/
 /* Aspecte */
-header {
+.header {
   height: 100px;
   width: 100%;
   left: 0;
   top: 0;
   font-size: 0.8rem;
   padding: 5px;
-}
 
-/* Logo */
-#logo-header {
-  float: left;
-  text-decoration: none;
-}
-
-#logo-header img {
-  height: 81px;
+  & img {
+    height: 80px;
+    float: left;
+  }
 }
 
 .hero {
@@ -43,24 +38,25 @@ header {
   background-size: cover;
   height: 55vh;
   position: relative;
-}
 
-.hero-text {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 40%;
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 900;
-  color: black;
-  font-family: $pac1-font-title;
-}
-
-@media (min-width: 992px) {
-  .hero-text {
+  & .hero__texte {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 40%;
     font-size: 4rem;
+    line-height: 1;
+    font-weight: 900;
+    color: black;
+    font-family: $pac1-font-title;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero .hero__texte {
+    font-size: 2rem;
     max-width: 750px;
+    color: white;
   }
 }
 
