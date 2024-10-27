@@ -19,6 +19,15 @@ body {
 /*****************************/
 /* HEADER                    */
 /*****************************/
+
+@function lightness-shift($colour) {
+  @if (lightness($colour) < 25%) {
+    @return lighten($colour, 10%);
+  } @else {
+    @return darken($colour, 10%);
+  }
+}
+
 .header {
   height: 100px;
   width: 100%;
@@ -59,6 +68,11 @@ body {
     font-size: 2rem;
     max-width: 750px;
     color: white;
+  }
+
+  .header {
+    background-color: lightness-shift($pac1-color-background);
+    text-align: center;
   }
 }
 
