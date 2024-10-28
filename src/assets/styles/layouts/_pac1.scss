@@ -20,19 +20,13 @@ body {
 /* HEADER                    */
 /*****************************/
 
-@function lightness-shift($colour) {
-  @if (lightness($colour) < 25%) {
-    @return lighten($colour, 10%);
-  } @else {
-    @return darken($colour, 10%);
-  }
-}
-
 .header {
-  height: 100px;
-  width: 100%;
   left: 0;
   top: 0;
+
+  height: 100px;
+  width: 100%;
+
   font-size: 0.8rem;
   padding: 5px;
 
@@ -43,22 +37,26 @@ body {
 }
 
 .hero {
+  height: 55vh;
+  position: relative;
+
   background-image: url("../images/logo-hero.jpg?as=webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 55vh;
-  position: relative;
 
   & .hero__texte {
     position: absolute;
-    transform: translate(-50%, -50%);
+
     top: 50%;
     left: 40%;
+
+    transform: translate(-50%, -50%);
+
     font-size: 4rem;
     line-height: 1;
     font-weight: 900;
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: $pac1-font-title;
   }
 }
@@ -67,11 +65,10 @@ body {
   .hero .hero__texte {
     font-size: 2rem;
     max-width: 750px;
-    color: white;
+    color: rgb(255, 255, 255);
   }
 
   .header {
-    background-color: lightness-shift($pac1-color-background);
     text-align: center;
   }
 }
@@ -79,22 +76,41 @@ body {
 /*****************************/
 /* FOOTER                    */
 /*****************************/
-/* Aspecte */
+
+@function lightness-shift($colour) {
+  @if (lightness($colour) < 25%) {
+    @return lighten($colour, 10%);
+  } @else {
+    @return darken($colour, 10%);
+  }
+}
+
 .footer {
-  background: rgb(0, 59, 74);
-  height: 200px;
-  width: 100%;
   left: 0;
   top: 0;
+
+  height: 200px;
+  width: 100%;
+
   font-size: 0.8rem;
   color: rgb(255, 255, 255);
+
+  background: $pac1-color-background-footer;
 }
 
 .footer__box {
   padding-top: 40px;
   padding-left: 40px;
+
   float: left;
+
   text-align: left;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    background-color: lightness-shift($pac1-color-background-footer);
+  }
 }
 
 /*****************************/
@@ -102,8 +118,10 @@ body {
 /*****************************/
 .detall {
   width: 95%;
+
   padding: 20px;
   margin: 0 auto;
+
   overflow: auto;
 
   & img {
@@ -131,50 +149,60 @@ body {
   padding: 20px;
 
   & h2 {
+    padding-top: 20px;
+
     font-size: 1.6em;
     line-height: 1.2em;
-    padding-top: 20px;
-    color: green;
+
+    color: rgb(22, 190, 22);
   }
 }
 
 .column-detall-left__titols {
   padding: 10px;
+
+  font-family: $pac1-font-foto-title;
   font-size: 1.1em;
   line-height: 1em;
   text-align: center;
 }
 
 .column-detall-left__titols--descarrega {
-  color: blue;
+  color: rgb(0, 0, 255);
 }
 
 .column-detall-right {
-  float: left;
-  width: 35%;
-  padding: 20px;
   margin-top: -35px;
 
+  float: left;
+
+  width: 35%;
+  padding: 20px;
+
   & h2 {
+    padding-top: 40px;
+
     font-size: 1.6em;
     line-height: 1.2em;
-    padding-top: 40px;
-    color: red;
+    color: rgb(255, 0, 0);
   }
 }
 
 .column-detall-right__fotos {
-  float: left;
-  background-color: rgb(255, 255, 255);
-  margin: auto;
-  width: 100%;
   position: relative;
-  text-align: center;
+
   margin-bottom: 20px;
+
+  float: left;
+  width: 100%;
+
   overflow: hidden;
-  font-family: $pac1-font-subtitle;
+
+  text-align: center;
+  font-family: $pac1-font-foto-title;
   font-style: italic;
 
+  background-color: rgb(255, 255, 255);
   & img {
     width: 100%;
     display: inline-block;
@@ -183,6 +211,7 @@ body {
 
 .column-detall-right__titols {
   padding: 10px;
+
   font-size: 1.1em;
   line-height: 1em;
   text-align: right;
@@ -210,12 +239,14 @@ body {
 
   .column-detall-left__titols {
     padding: 0;
+
     font-size: 0.8em;
     text-align: left;
   }
 
   .column-detall-right__titols {
     padding: 0;
+
     font-size: 0.8em;
     text-align: left;
   }
